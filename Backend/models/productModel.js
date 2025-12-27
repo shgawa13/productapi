@@ -5,17 +5,29 @@ const mongoose = require("mongoose");
 */
 const productSchema = mongoose.Schema(
   {
-    kind: {
+    Name: {
       type: String,
-      required: [true, "please add the product kind"],
+      required: [true, "please add the product name"],
     },
-    amount: {
+    Image: {
+      type: String,
+      required: [true, "please add the product image"],
+    },
+    Description: {
+      type: String,
+      required: [true, "please add the product description"],
+    },
+    Amount: {
       type: Number,
       required: [true, "please add the product amount"],
     },
-    price: {
+    Price: {
       type: Number,
       required: [true, "please add the product price"],
+    },
+    Category: {
+      type: String,
+      required: [true, "please add the product category"],
     },
   },
   { timestamps: true }
